@@ -5,7 +5,9 @@ Command line to list files on folder.
 ### How to install
 
 ```
-deno install --global --allow-net jsr:@rkvcs/dyr
+git clone https://github.com/rkvcs/dyr
+cd dyr
+deno install --global --name dyr --config deno.json main.ts
 ```
 
 ### How to use
@@ -20,4 +22,4 @@ Options:
 
 ```
 #### ---
-![Screenshot](./screenshot.png)
+<img src="./screenshot.png" width="300"/>

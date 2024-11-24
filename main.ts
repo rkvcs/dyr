@@ -27,7 +27,7 @@ class FolderInOut {
 export async function list() {
     const { options } = await new Command()
         .name("dyr")
-        .version("0.1.0")
+        .version("0.1.2")
         .description("Command line to list files on folder.")
         .option("-s, --search <term:string>", "Find files or folders by name")
         .option("-d, --only-dirs", "List only directories")

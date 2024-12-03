@@ -16,10 +16,12 @@ deno install --global --name dyr --config deno.json main.ts
 dyr <option>
 
 Options:
-  -s, --search      <term>  - Find files or folders by name              
-  -d, --only-dirs           - List only directories                      
-  -f, --only-files          - List only files 
+    -h               - Show this help.                            
+    -v               - Show the version number for this program.  
+    -s <term>        - Find files or folders by name              
+    -d               - List only directories                      
+    -f               - List only files 
 
 ```
 #### ---
-<img src="./screenshot.png" width="300"/>
+<img src="./screenshot.png" width="500"/>

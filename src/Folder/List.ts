@@ -1,6 +1,5 @@
 import { FolderItem } from "./Item.ts";
-import { SummaryFolderItem } from "./Interfaces/Summary.ts";
-import { colors } from "https://deno.land/x/cliffy@v1.0.0-rc.4/ansi/colors.ts";
+import { SummaryFolderItem, ArrayItems } from "./Interfaces/Summary.ts";
 
 export class ListFolderItems {
     private list: FolderItem[] = [];
@@ -68,8 +67,8 @@ export class ListFolderItems {
         return result;
     }
 
-    public toArray(filter?: { isDir?: boolean }) {
-        let result: Array<string[]> = [];
+    public toArray(filter?: { isDir?: boolean }): Array<ArrayItems> {
+        let result: Array<ArrayItems> = [];
         let _items: FolderItem[] = [];
 
         if (filter?.isDir) {
@@ -81,13 +80,11 @@ export class ListFolderItems {
         _items.sort();
 
         _items.forEach((item) => {
-            let _name = item.name;
-
-            if (item.isDir) {
-                _name = colors.magenta(_name);
-            }
-
-            result.push([_name, item.parseSize()]);
+            result.push({ 
+                name: item.name, 
+                size: item.parseSize(), 
+                is_dir: item.isDir
+            });
         });
 
         return result;

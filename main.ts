@@ -3,6 +3,7 @@ import { ListFolderItems } from "./src/Folder/List.ts";
 import { FolderInOut } from "./src/FolderInOut.ts";
 import { Command as TCommand } from "./src/Command.ts";
 
+/** List all files/directories and render a table with all. */
 export function list(): string {
 
     let command = new TCommand()

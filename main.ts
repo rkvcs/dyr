@@ -4,7 +4,7 @@ import { FolderInOut } from "./src/FolderInOut.ts";
 import { Command as TCommand } from "./src/Command.ts";
 
 /** List all files/directories and render a table with all. */
-export function list(): string {
+export function list(search:string|undefined = undefined, only_dir = false, only_files = false): string {
 
     let command = new TCommand()
     let _result = ''
@@ -30,16 +30,18 @@ export function list(): string {
             }
 
             // List only files
-            if(command.get('f') && _is_dir == true){
+            if((command.get('f') ?? only_files) && _is_dir == true){
                 continue
             }
 
             // List only directories
-            if(command.get('d') && _is_dir == false){
+            if((command.get('d') ?? only_dir) && _is_dir == false){
                 continue
             }
 
-            if(command.get('s') && dirEntry.name.search(command.get('s').toString()) == -1){
+            // find the term
+            let _term = command.get('s') ?? search;
+            if(_term && dirEntry.name.search(_term.toString()) == -1){
                 continue
             }
 

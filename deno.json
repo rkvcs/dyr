@@ -1,10 +1,11 @@
 {
     "name": "@rkvcs/dyr",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "exports": "./main.ts",
     "tasks": {
         "dev": "deno run --allow-read --allow-env main.ts",
-        "build": "deno compile --allow-read --allow-env main.ts"
+        "build": "deno compile --allow-read --allow-env main.ts",
+        "test": "deno test --allow-read"
     },
     "imports": {
         "@rkvcs/tyble": "jsr:@rkvcs/tyble@^0.1.6",

@@ -1,6 +1,6 @@
 # Dyr
 
-Command line to list files on folder.
+Command line to list files on terminal.
 
 ### How to install
 

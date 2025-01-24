@@ -1,6 +1,6 @@
 {
   "name": "@rkvcs/dyr",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "exports": "./main.ts",
   "tasks": {
     "dev": "deno run --allow-read --allow-env main.ts",

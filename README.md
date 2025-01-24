@@ -5,9 +5,7 @@ Command line to list files on terminal.
 ### How to install
 
 ```
-git clone https://github.com/rkvcs/dyr
-cd dyr
-deno install --global --name jsr:@rkvcs/dict-cli
+deno install --global --allow-read --allow-env jsr:@rkvcs/dyr
 ```
 
 ### How to use

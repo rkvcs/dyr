@@ -13,10 +13,6 @@ export function list(search:string|undefined = undefined, only_dir = false, only
         return command.help()
     }
 
-    if(command.get('v')){
-        return command.version()
-    }
-
     let folder: string = Deno.cwd();
     let _items = new ListFolderItems();
     let _total:number = 0;
@@ -59,11 +55,11 @@ export function list(search:string|undefined = undefined, only_dir = false, only
 
         let render = new FolderInOut();
         let _footer = new FolderItem({name: 'Total', size: _total, isDir: false});
-        
+
         _items.sort();
 
         let tb_str = render.table(_items, _footer);
-        
+
         _result = `\n${tb_str}\n`
 
     } catch (err) {

@@ -7,7 +7,7 @@ Command line to list files on terminal.
 ```
 git clone https://github.com/rkvcs/dyr
 cd dyr
-deno install --global --name dyr --config deno.json main.ts
+deno install --global --name jsr:@rkvcs/dict-cli
 ```
 
 ### How to use
@@ -16,11 +16,11 @@ deno install --global --name dyr --config deno.json main.ts
 dyr <option>
 
 Options:
-    -h               - Show this help.                            
-    -v               - Show the version number for this program.  
-    -s <term>        - Find files or folders by name              
-    -d               - List only directories                      
-    -f               - List only files 
+    -h               - Show this help.
+    -v               - Show the version number for this program.
+    -s <term>        - Find files or folders by name
+    -d               - List only directories
+    -f               - List only files
 
 ```
 #### ---
